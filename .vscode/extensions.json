@@ -2,6 +2,7 @@
     "recommendations": [
         "editorconfig.editorconfig",
         "ms-pyright.pyright",
+        "redhat.vscode-yaml",
         "tamasfe.even-better-toml"
     ]
 }
