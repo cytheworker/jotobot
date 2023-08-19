@@ -1,0 +1,17 @@
+[tool.poetry]
+name        = "jotobot"
+version     = "0.1.0"
+description = ""
+authors     = ["CyTheWorker <cytheworker@gmail.com>"]
+license     = "MIT"
+
+[tool.poetry.dependencies]
+python       = "^3.11"
+"discord.py" = "^2.3"
+
+[tool.pyright]
+exclude          = ["**/__pycache__", ".venv"]
+pythonVersion    = "3.11"
+typeCheckingMode = "basic"
+venv             = ".venv"
+venvPath         = "."
