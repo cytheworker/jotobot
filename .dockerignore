@@ -1,12 +1,13 @@
 .git
+.github
 .venv
 .vscode
 .editorconfig
 .env
 .gitattributes
 .gitignore
-cliff.toml
 CODE_OF_CONDUCT.md
 justfile
 LICENSE
 README.md
+setup.cfg
