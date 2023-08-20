@@ -23,4 +23,5 @@
 from discord.ext import commands
 
 
-class Bot(commands.Bot): ...
+class Bot(commands.Bot):
+    ...

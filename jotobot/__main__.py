@@ -52,15 +52,15 @@ async def main() -> None:
         sys.exit(1)
 
     intents = discord.Intents(
-        guilds = True,
-        members = True,
-        messages = True,
-        message_content = True
+        guilds=True,
+        members=True,
+        messages=True,
+        message_content=True
     )
     async with jotobot.Bot(
-        command_prefix = "/",
-        case_insensitive = True,
-        intents = intents
+        command_prefix="/",
+        case_insensitive=True,
+        intents=intents
     ) as bot:
 
         jotobot.command(bot)

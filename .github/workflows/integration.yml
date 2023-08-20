@@ -24,3 +24,5 @@ jobs:
           echo "$(poetry env info --path)/bin" >> $GITHUB_PATH
       - name: Execute Pyright
         uses: jakebailey/pyright-action@v1
+      - name: Execute Flake8
+        uses: py-actions/flake8@v2
