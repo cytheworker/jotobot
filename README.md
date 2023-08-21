@@ -23,8 +23,10 @@ moment, but feel free to host the bot for your communities yourself! The
 following shows the easiest and simplest way to run the bot on your machine:
 
 ```sh
-# ensure the latest version of `docker` is installed
-# create a .env with .env.example as the template
+# ENSURE TO DO THE FOLLOWING BEFORE PROCEEDING:
+# - install the latest version of `docker`
+# - copy `.env.example` as `.env` and fill out the missing values
+# - enable the gateway intents of `SERVER MEMBERS` and `MESSAGE CONTENT`
 docker run --env-file .env ghcr.io/cytheworker/jotobot:latest
 ```
 
