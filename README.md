@@ -1,6 +1,5 @@
 [Discord]: https://discord.com/
 [Flake8]: https://flake8.pycqa.org/en/latest/
-[Git]: https://git-scm.com/
 [Jotoba API]: https://jotoba.de/docs.html
 [Pyright]: https://github.com/microsoft/pyright
 
@@ -19,16 +18,14 @@ dictionary provided by [Jotoba API] on [Discord].
 
 ## Hosting
 
-We have no plan on hosting the bot ourself, but feel free to host the bot yourself!
+We have no plan nor unfortunately able to host the bot 24/7 ourself at the
+moment, but feel free to host the bot for your communities yourself! The
+following shows the easiest and simplest way to run the bot on your machine:
 
 ```sh
-# ensure the latest version of `git` and `docker` are installed
-git clone https://github.com/cytheworker/jotobot.git
-cd jotobot
-
-# ensure the gateway intents of `SERVER MEMBERS` and `MESSAGE CONTENT` are enabled
-echo DISCORD_TOKEN=[YOUR DISCORD BOT TOKEN] >> .env
-docker compose up --build # optionally `just run` if you have `just` installed
+# ensure the latest version of `docker` is installed
+# create a .env with .env.example as the template
+docker run --env-file .env ghcr.io/cytheworker/jotobot:latest
 ```
 
 ## Contributing
