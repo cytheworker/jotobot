@@ -1,5 +1,14 @@
 on:
-  - push
+  push:
+    branches:
+      - "main"
+    paths:
+      - ".github/workflows/delivery.yml"
+      - "jotobot/**"
+      - ".dockerignore"
+      - "Dockerfile"
+      - "poetry.lock"
+      - "pyproject.toml"
 
 jobs:
   publish:
