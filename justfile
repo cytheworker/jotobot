@@ -1,2 +1,4 @@
+build:
+    docker build -t jotobot:latest .
 run:
-    docker compose up --build
+    docker run --env-file .env jotobot:latest
