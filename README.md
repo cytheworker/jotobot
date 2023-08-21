@@ -18,12 +18,12 @@ dictionary provided by [Jotoba API] on [Discord].
 
 ## Hosting
 
-We have no plan nor unfortunately able to host the bot 24/7 ourself at the
-moment, but feel free to host the bot for your communities yourself! The
-following shows the easiest and simplest way to run the bot on your machine:
+We have no plan nor able to host the bot 24/7 ourself at the moment,
+but feel free to host the bot for your communities yourself! The following
+shows the easiest and simplest way to run the bot on your machine:
 
 ```sh
-# ENSURE TO DO THE FOLLOWING BEFORE PROCEEDING:
+# ENSURE THE FOLLOWING PREREQUISITES ARE MET BEFORE PROCEEDING:
 # - install the latest version of `docker`
 # - copy `.env.example` as `.env` and fill out the missing values
 # - enable the gateway intents of `SERVER MEMBERS` and `MESSAGE CONTENT`
@@ -35,7 +35,7 @@ docker run --env-file .env ghcr.io/cytheworker/jotobot:latest
 Any form of contributions are greatly welcomed and appreciated! There are no strict
 guidelines and rules in terms of code styling and issue/pull request templating,
 but we enforce the use of [Flake8] and [Pyright] on the codebase, as well as a
-clear and detailed description/explanation of proposed issues/pull requests.
+detailed and concise description/explanation of proposed issues/pull requests.
 
 ## License
 
