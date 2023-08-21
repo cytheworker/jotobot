@@ -34,7 +34,7 @@ docker run --env-file .env ghcr.io/cytheworker/jotobot:latest
 
 Any form of contributions are greatly welcomed and appreciated! There are no strict
 guidelines and rules in terms of code styling and issue/pull request templating,
-but we enforce the use of [Flake8] and [Pyright] on the codebase, as well as a
+but we enforce the use of [Flake8] and [Pyright] on the codebase, as well as
 detailed and concise description/explanation of proposed issues/pull requests.
 
 ## License
