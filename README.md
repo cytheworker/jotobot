@@ -15,6 +15,15 @@ for their communities by themselves with the following steps:
 docker run --env-file .env ghcr.io/cytheworker/jotobot:latest
 ```
 
+## Development
+
+The current development progress is as follows:
+
+- [ ] Search (words/names/kanji/sentences)
+- [ ] Radicals (by_radical/search)
+- [ ] Completion (suggestion)
+- [ ] News (short/detailed) ???
+
 ## License
 
 MIT License
