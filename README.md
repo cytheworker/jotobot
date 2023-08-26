@@ -1,41 +1,19 @@
-[Discord]: https://discord.com/
-[Flake8]: https://flake8.pycqa.org/en/latest/
 [Jotoba API]: https://jotoba.de/docs.html
-[Pyright]: https://github.com/microsoft/pyright
 
 # JotoBot
 
-**JotoBot** allows a quick and easy access to a Japanese
-dictionary provided by [Jotoba API] from [Discord].
-
-## Roadmap
-
-- [ ] Search
-- [ ] Image
-- [ ] Radicals
-- [ ] Completion
-- [ ] News
-
-## Hosting
-
-We have no plan nor able to host the bot 24/7 ourself at the moment,
-but feel free to host the bot for your communities yourself! The following
-shows the easiest and simplest way to run the bot on your machine:
+**JotoBot** provides a quick and easy access to a Japanese
+dictionary from within **Discord** by leveraging [Jotoba API].
+We are unable to host the bot for **24/7** ourselves at the moment,
+but we made it simple enough for anyone to be able to host the bot
+for their communities by themselves with the following steps:
 
 ```sh
-# ENSURE THE FOLLOWING PREREQUISITES ARE MET BEFORE PROCEEDING:
-# - install the latest version of `docker`
-# - copy `.env.example` as `.env` and fill out the missing values
-# - enable the gateway intents of `SERVER MEMBERS` and `MESSAGE CONTENT`
+# install the latest version of `docker`
+# copy `.env.example` as `.env` and fill out the missing values
+# enable the gateway intents of `SERVER MEMBERS` and `MESSAGE CONTENT`
 docker run --env-file .env ghcr.io/cytheworker/jotobot:latest
 ```
-
-## Contributing
-
-Any form of contributions are greatly welcomed and appreciated! There are no strict
-guidelines and rules in terms of code styling and issue/pull request templating,
-but we enforce the use of [Flake8] and [Pyright] on the source, as well as
-detailed and concise description/explanation of proposed issues/pull requests.
 
 ## License
 
