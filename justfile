@@ -1,4 +1,4 @@
 build:
-    docker build -t jotobot:latest .
+    docker build -t cytheworker/jotobot:latest .
 run:
-    docker run --env-file .env jotobot:latest
+    docker run --env-file .env cytheworker/jotobot:latest
