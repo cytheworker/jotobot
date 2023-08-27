@@ -20,8 +20,21 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
+import discord
 from discord.ext import commands
 
 
 class Bot(commands.Bot):
-    ...
+    def __init__(self) -> None:
+        intents = discord.Intents(
+            guilds=True,
+            members=True,
+            messages=True,
+            message_content=True
+        )
+
+        super().__init__(
+            command_prefix="/",
+            case_insensitive=True,
+            intents=intents
+        )

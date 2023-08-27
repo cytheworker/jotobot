@@ -25,8 +25,6 @@ import logging
 import os
 import sys
 
-import discord
-
 import jotobot
 
 
@@ -50,18 +48,7 @@ async def main() -> None:
         logger.critical("DISCORD_TOKEN not found")
         sys.exit(1)
 
-    intents = discord.Intents(
-        guilds=True,
-        members=True,
-        messages=True,
-        message_content=True
-    )
-
-    async with jotobot.Bot(
-        command_prefix="/",
-        case_insensitive=True,
-        intents=intents
-    ) as bot:
+    async with jotobot.Bot() as bot:
         for extension in ("event", "owner"):
             await bot.load_extension(f"jotobot.extension.{extension}")
 
