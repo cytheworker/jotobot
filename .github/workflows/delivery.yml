@@ -4,9 +4,9 @@ on:
       - main
 
 jobs:
-  image:
+  ghcr:
     runs-on: ubuntu-latest
-    environment: docker
+    environment: ghcr
     permissions:
       contents: read
       packages: write
