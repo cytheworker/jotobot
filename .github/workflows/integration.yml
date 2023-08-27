@@ -26,7 +26,7 @@ jobs:
       - name: Execute Flake8
         uses: py-actions/flake8@v2
 
-  container:
+  image:
     needs: source
     runs-on: ubuntu-latest
     steps:
