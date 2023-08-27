@@ -22,25 +22,31 @@
 
 import logging
 
-from .bot import Bot
+from discord.ext import commands
+
+from ..bot import Bot
 
 
 _logger = logging.getLogger(__name__)
 
 
-def event(bot: Bot) -> None:
-    @bot.event
+class Event(commands.Cog):
+    @commands.Cog.listener()
     async def on_connect() -> None:
         _logger.info("connected to discord")
 
-    @bot.event
+    @commands.Cog.listener()
     async def on_disconnect() -> None:
         _logger.info("disconnected from discord")
 
-    @bot.event
+    @commands.Cog.listener()
     async def on_ready() -> None:
         _logger.info("cache prepared")
 
-    @bot.event
+    @commands.Cog.listener()
     async def on_resumed() -> None:
         _logger.info("session resumed")
+
+
+async def setup(bot: Bot) -> None:
+    await bot.add_cog(Event())

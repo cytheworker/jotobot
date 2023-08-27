@@ -21,5 +21,3 @@
 # SOFTWARE.
 
 from .bot import Bot
-from .command import command
-from .event import event

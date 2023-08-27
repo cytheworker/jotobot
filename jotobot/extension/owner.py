@@ -26,34 +26,42 @@ from typing import Literal
 import discord
 from discord.ext import commands
 
-from .bot import Bot
+from ..bot import Bot
 
 
 _logger = logging.getLogger(__name__)
 
 
-def command(bot: Bot) -> None:
-    @bot.command()
+class Owner(commands.Cog):
+    def __init__(self, bot: Bot) -> None:
+        self._bot = bot
+
+    @commands.command()
     @commands.is_owner()
     @commands.guild_only()
-    async def close(_: commands.Context) -> None:
+    async def close(self, _: commands.Context) -> None:
         _logger.warn("closing connection")
-        await bot.close()
+        await self._bot.close()
 
-    @bot.command()
+    @commands.command()
     @commands.is_owner()
     @commands.guild_only()
     async def sync(
+        self,
         context: commands.Context,
         where: Literal["here", "global"] | int | None
     ) -> None:
         match where:
             case "here":
-                guild = context.guild
-            case int():
                 guild = discord.Object(id=where)
             case "global" | None:
+                guild = context.guild
+            case int():
                 guild = None
 
-        commands = await bot.tree.sync(guild=guild)
+        commands = await self._bot.tree.sync(guild=guild)
         _logger.info(f"{len(commands)} commands synced")
+
+
+async def setup(bot: Bot) -> None:
+    await bot.add_cog(Owner(bot))

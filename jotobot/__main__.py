@@ -62,8 +62,9 @@ async def main() -> None:
         case_insensitive=True,
         intents=intents
     ) as bot:
-        jotobot.command(bot)
-        jotobot.event(bot)
+        for extension in ("event", "owner"):
+            await bot.load_extension(f"jotobot.extension.{extension}")
+
         await bot.start(token)
 
 
