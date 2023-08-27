@@ -32,19 +32,19 @@ _logger = logging.getLogger(__name__)
 
 class Event(commands.Cog):
     @commands.Cog.listener()
-    async def on_connect() -> None:
+    async def on_connect(self) -> None:
         _logger.info("connected to discord")
 
     @commands.Cog.listener()
-    async def on_disconnect() -> None:
+    async def on_disconnect(self) -> None:
         _logger.info("disconnected from discord")
 
     @commands.Cog.listener()
-    async def on_ready() -> None:
+    async def on_ready(self) -> None:
         _logger.info("cache prepared")
 
     @commands.Cog.listener()
-    async def on_resumed() -> None:
+    async def on_resumed(self) -> None:
         _logger.info("session resumed")
 
 
