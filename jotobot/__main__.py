@@ -46,8 +46,7 @@ async def main() -> None:
     logger.addHandler(console)
 
 
-    token = os.environ.get("DISCORD_TOKEN")
-    if token is None:
+    if (token := os.environ.get("DISCORD_TOKEN")) is None:
         logger.critical("DISCORD_TOKEN not found")
         sys.exit(1)
 
@@ -57,15 +56,15 @@ async def main() -> None:
         messages=True,
         message_content=True
     )
+
     async with jotobot.Bot(
         command_prefix="/",
         case_insensitive=True,
         intents=intents
     ) as bot:
-
         jotobot.command(bot)
         jotobot.event(bot)
-        await bot.start(token)  # pyright: ignore [reportGeneralTypeIssues]
+        await bot.start(token)
 
 
 asyncio.run(main())

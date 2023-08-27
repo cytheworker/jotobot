@@ -54,7 +54,6 @@ def command(bot: Bot) -> None:
                 guild = discord.Object(id=where)
             case "global" | None:
                 guild = None
-        commands = await bot.tree.sync(guild=guild)
 
-        count = len(commands)
-        _logger.info(f"{count} commands synced")
+        commands = await bot.tree.sync(guild=guild)
+        _logger.info(f"{len(commands)} commands synced")
