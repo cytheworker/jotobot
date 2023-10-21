@@ -2,11 +2,10 @@
 
 # JotoBot
 
-**JotoBot** is a free and self-hostable **Discord** bot that provides a quick
-and easy access to a **Japanese** dictionary with the help of [Jotoba API]. We
-do not have plan to host the bot 24/7 by ourselves at the moment, but we have
-made it simple enough for anyone to self-host the bot for their communities
-with the following instruction:
+**JotoBot** is a free self-hosted **Discord** bot that provides a quick and
+easy access to a **Japanese** dictionary provided by [Jotoba API]. The
+project is currently **work in progress**, but the latest development
+version can still be installed and run with the following steps:
 
 ```sh
 # install the latest version of `docker`
@@ -16,14 +15,12 @@ with the following instruction:
 docker run --env-file .env ghcr.io/cytheworker/jotobot:latest
 ```
 
-## Development
-
-The current development progress is as follows:
+## Roadmap
 
 - [ ] Search (words/names/kanji/sentences)
 - [ ] Radicals (by_radical/search)
 - [ ] Completion (suggestion)
-- [ ] News (short/detailed) ???
+- [ ] News (short/detailed)
 
 ## License
 

@@ -49,14 +49,14 @@ class Owner(commands.Cog):
     async def sync(
         self,
         context: commands.Context,
-        where: Literal["here", "global"] | int | None
+        where: Literal["here", "all"] | int | None = None
     ) -> None:
         match where:
             case "here":
-                guild = discord.Object(id=where)
-            case "global" | None:
                 guild = context.guild
             case int():
+                guild = discord.Object(id=where)
+            case "all" | None:
                 guild = None
 
         commands = await self._bot.tree.sync(guild=guild)

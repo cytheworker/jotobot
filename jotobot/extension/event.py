@@ -41,7 +41,7 @@ class Event(commands.Cog):
 
     @commands.Cog.listener()
     async def on_ready(self) -> None:
-        _logger.info("cache prepared")
+        _logger.info("cache ready")
 
     @commands.Cog.listener()
     async def on_resumed(self) -> None:
